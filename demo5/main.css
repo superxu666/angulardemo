@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+body,ul,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input{ margin:0; padding:0; }
+
+body{ font-size:12px; }
+
+img{ border:none; }
+
+li{ list-style:none; }
+
+input,select,textarea{ outline:none; border: none; background: none; }
+
+textarea{ resize:none; }
+
+a{ text-decoration:none; color: #656565; }
+
+
+/*清除浮动*/
+.clearfix:after{ content: ""; display: block; clear: both; }
+
+.clearfix{ zoom:1; }
+
+.fl{ float: left; }
+.fr{ float: right; }
+
+body{
+	height: 700px;
+	/*word-wrap: break-word;*/
+	/*word-break: normal;*/
+}
+
+.ngview{
+	padding-bottom: 47px;
+  width: 100%;
+  min-height: 100px;
+}
+
+.footer{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 46px;
+	background: #E7E7E7;
+	display: flex;
+	align-items: center;
+}
+.footer a{
+	color: red;
+	flex-grow: 1;
+	text-align: center;
+	display: block;
+	height: 46px;
+	line-height: 46px;
+}

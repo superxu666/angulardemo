@@ -1,0 +1,35 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body ng-app="app">
+
+	<div ng-controller="mytrl">
+		<h1 ng-bind="header"></h1>
+	</div>
+
+	<div ng-controller="myctrl1">
+		<p>时间: <span ng-bind="thetime"></span></p>
+	</div>
+
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript">
+		
+		var app = angular.module('app', [])
+		app.controller('mytrl', function($scope, $timeout){
+			$scope.header = 'hello world'
+			$timeout(function() {
+				$scope.header = 'how old are you?'
+			}, 2000)
+		})
+
+		app.controller('myctrl1', function($scope, $interval){
+
+			$interval(function(){
+				$scope.thetime = new Date().toLocaleString()
+			}, 1000)
+		})
+	</script>
+</body>
+</html>

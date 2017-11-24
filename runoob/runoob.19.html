@@ -1,0 +1,78 @@
+<html ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+</head>
+<body ng-controller="userCtrl">
+
+
+	<div class="container">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Edit</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="user in users">
+					<td>
+						<button class="btn btn-danger" ng-click="editUser(user.id)">
+							<span class="glyphicon glyphicon-pencil"></span> 编辑
+						</button>
+					</td>
+					<td ng-bind="user.fName"></td>
+					<td ng-bind="user.lName"></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<hr>
+		<button class="btn btn-primary" ng-click="editUser('new')">
+			<span class="glyphicon glyphicon-user"></span> 创建新用户
+		</button>
+		<hr>
+
+		<h3 ng-show="edit">创建新用户:</h3>
+		<h3 ng-hide="edit">编辑用户:</h3>
+
+		<form class="form-horizontal">
+			<div class="form-group">
+				<label class="col-md-2 control-label">名: </label>
+				<div class="col-md-10">
+					<input type="text" ng-model="fName" ng-disabled="!edit" placeholder="名">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-2 control-label">姓: </label>
+				<div class="col-md-10">
+					<input type="text" ng-model="lName" ng-disabled="!edit" placeholder="姓">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-2 control-label">密码: </label>
+				<div class="col-md-10">
+					<input type="text" ng-model="passw1" placeholder="密码">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-2 control-label">重复密码: </label>
+				<div class="col-md-10">
+					<input type="text" ng-model="passw2" placeholder="重复密码">
+				</div>
+			</div>
+		</form>
+
+		<hr>
+		<button class="btn btn-success" ng-disabled="error || incomplete">
+			<span class="glyphicon glyphicon-save"></span> <span ng-bind="text"></span>
+		</button>
+	</div>
+
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="runoob.19.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body ng-app="app">
+	
+	<div ng-controller="myctrl">
+		<select ng-init="selectedName=names[0]" ng-model="selectedName" ng-options="x for x in names"></select>
+
+		<p>{{selectName}}</p>
+	</div>
+
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript">
+		var app = angular.module('app', [])
+
+		app.controller('myctrl', function($scope){
+			$scope.names = ['google', 'runoob', 'taobao']
+		})
+	</script>
+</body>
+</html>

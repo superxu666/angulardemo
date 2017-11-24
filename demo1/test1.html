@@ -1,0 +1,103 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+</head>
+<body>
+
+	<h1>hello wolrd</h1>
+	
+	<!-- <div ng-app="">
+		<input type="text" ng-init="firstname = 'john'" name="">
+		<p>name : <span ng-bind="firstname"></span></p>
+	</div> -->
+
+	
+	<!-- <div ng-app="myapp">
+		firstname: <input type="text" ng-model="firstname" name="">
+		lastname: <input type="text" ng-model="lastname" name="">
+
+		姓名:{{firstname + ' ' + lastname}}
+	</div> -->
+
+
+	<!-- <div ng-app='' ng-init="q=1;c=8">
+		
+		<p>总价: <span ng-bind="q*c"></span></p>
+	</div> -->
+
+
+	<!-- <div ng-app="" ng-init="points=[123,1333,'helloworld','55555555']">
+		
+		<p>{{points[1]}}</p>
+		<p><span ng-bind="points[2]"></span></p>
+		<p ng-bind="points[3]"></p>
+	</div> -->
+
+
+
+	<!-- <div ng-app="">
+		<input type="test" ng-model="name" ng-init="name=''" name="">
+		<p ng-bind="name"></p>
+	</div> -->
+
+
+	<!-- <div ng-app="" ng-init="names=['jani', 'hege', 'kai']">
+		<ul>
+			<li ng-repeat="x in names">
+				{{x}}
+			</li>
+		</ul>
+	</div> -->
+
+
+
+
+	<!-- <div ng-app="" ng-init="names=[{name:'jani',country:'norway'},{name:'hege',country:'sweden'},{name:'kai',country:'denmark'}]">
+		<ul>
+			<li ng-repeat="x in names">
+				{{x.name +" , "+x.country}}
+			</li>
+		</ul>
+	</div> -->
+
+
+	<div ng-app="app1">
+		
+		<div ng-controller="hello">
+			<input type="text" ng-model="name" name="">
+			<p>name: <span ng-bind="name"></span></p>
+		</div>
+	</div>
+
+	
+	<!-- <div ng-app="myapp">
+		
+		<runoob-directive></runoob-directive>
+	</div> -->
+
+
+	<script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="module1.js"></script>
+
+	<script type="text/javascript">
+		
+		// var app = angular.module("myapp", []);
+		// app.controller('myctrl', function($scope) {
+		// 	$scope.firstname = 'john';
+		// 	$scope.lastname = 'doe';
+		// })
+		
+
+		// var app = angular.module('myapp',[]);
+
+		// app.directive("runoob-directive",function(){
+
+		// 	return {
+		// 		template: "<h1>自定义指令</h1>"
+		// 	}
+		// });
+	</script>
+</body>
+</html>

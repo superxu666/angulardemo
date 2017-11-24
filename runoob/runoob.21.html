@@ -1,0 +1,35 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		
+		div {
+			transition: all linear 1s;
+			background: green;
+			height: 200px;
+		}
+
+		.ng-hide {
+			height: 0;
+		}
+	</style>
+</head>
+<body ng-app="app">
+
+
+
+
+	
+	<h1>隐藏div <input type="checkbox" ng-model="check" name=""></h1>
+
+	<div ng-hide="check"></div>
+
+
+	<script src="https://cdn.bootcss.com/angular.js/1.6.6/angular.min.js"></script>
+	<script src="https://cdn.bootcss.com/angular.js/1.6.6/angular-animate.min.js"></script>
+	<script>
+		var app = angular.module('app', ['ngAnimate'])
+	</script>
+</body>
+</html>

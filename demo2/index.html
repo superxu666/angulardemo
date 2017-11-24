@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+
+	<div ng-controller="Ctrl1">
+		<div class="bg-{{color}}">test css</div>
+		<button ng-click="changeColor();">test button</button>
+	</div>
+
+	<div ng-controller="Ctrl2">
+		
+		<button ng-click="toggle();">toggle</button>
+		<ul ng-show="ulstate.show">
+			<li>1</li>
+			<li>2</li>
+			<li>4</li>
+		</ul>
+	</div>
+
+	<script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

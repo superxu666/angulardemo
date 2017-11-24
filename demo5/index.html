@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body ng-controller="main">
+  
+	<div ng-view class="ngview"></div>
+	
+	<div class="footer">
+		<a href="#/home">首頁</a>
+		<a href="#/shop">商城</a>
+		<a href="#/cart" style="position: relative;">購物車<i style="background-color: #f60; display: block; width: 22px; height: 22px; line-height: 22px; border-radius: 10px; position: absolute; right: 0;top: 0; color: #fff; text-align: center;">{{num}}</i></a>
+		<a href="#/mine">我的</a>
+	</div>
+
+  <script src="https://cdn.bootcss.com/angular.js/1.6.6/angular.min.js"></script>
+  <script src="https://cdn.bootcss.com/angular.js/1.6.6/angular-route.min.js"></script>
+  <script src="./app.js"></script>
+  <script src="./maincontroller.js"></script>
+  <script src="./mainservice.js"></script>
+</body>
+</html>

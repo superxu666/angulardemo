@@ -1,0 +1,26 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<div ng-app="app" ng-controller="myctrl">
+		姓名: {{msg | reverse}}
+	</div>
+
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript">
+		var app = angular.module('app', [])
+		app.controller('myctrl', ['$scope', function($scope){
+			$scope.msg = 'Runoob'
+		}])
+
+		app.filter('reverse', function () {
+			return function(text) {
+				return text.split('').reverse().join('')
+			}
+		})
+	</script>
+</body>
+</html>

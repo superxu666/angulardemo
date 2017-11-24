@@ -1,0 +1,19 @@
+<div class="container">
+  <h1 ng-bind="title" class="text-info"></h1>
+  <div class="row">
+  	<div class="col-sm-12">
+	    <textarea cols="40" rows="10" ng-model="message"></textarea>
+  	</div>
+  </div>
+  <hr>
+  <div class="row">
+  	<div class="col-sm-12">
+	  	<input type="button" value="保存" class="btn btn-success" ng-click="save()">
+	  	<input type="button" value="清除" class="btn btn-warning" ng-click="clear()">
+  	</div>
+  </div>
+  <hr>
+  <div class="row col-sm-3">
+		<p ng-bind="'剩余字数: ' + count()" class="text-primary bg-danger text-center"></p>
+  </div>
+</div>

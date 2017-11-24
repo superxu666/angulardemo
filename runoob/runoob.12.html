@@ -1,0 +1,34 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body ng-app="app">
+
+
+<div ng-controller="myctrl">
+	
+	<ul>
+		<li ng-repeat="x in names">
+			<span ng-bind="x.Name"></span>, <span ng-bind="x.Url"></span>, <span ng-bind="x.Country"></span>
+		</li>
+	</ul>
+</div>
+
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript">
+		
+		var app = angular.module('app', [])
+		app.controller('myctrl', function($scope, $http){
+			$http({
+				method: 'GET',
+				url: 'runoob.12.php'
+			}).then(function successCallback(res){
+				$scope.names = res.data.sites
+			}, function errorCallback(res){
+				console.log('请求失败')
+			})
+		})
+	</script>
+</body>
+</html>

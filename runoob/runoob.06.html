@@ -1,0 +1,28 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body ng-app="app">
+	
+
+	<div ng-controller="consctrl">
+		<ul>
+			<li ng-repeat="x in names | orderBy:'country'">{{x.name + ', ' + x.country}}</li>
+		</ul>
+	</div>
+
+<script type="text/javascript" src="angular.min.js"></script>
+<script type="text/javascript">
+	
+	var app = angular.module('app', [])
+	app.controller('consctrl', ['$scope', function($scope){
+		$scope.names = [
+			{'name':'Kai', 'country':'Denmark'},
+			{'name':'Jani', 'country':'Norway'},
+			{'name':'Hege', 'country':'Sweden'}
+		]
+	}])
+</script>
+</body>
+</html>

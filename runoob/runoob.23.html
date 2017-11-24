@@ -1,0 +1,45 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+  <style type="text/css">
+  	body{ font-size: 26px; }
+  </style>
+</head>
+
+<body ng-app="app">
+  <div class="container">
+  	<div class="row">
+  		<div class="col-md-12" style="height: 200px;background: lightblue;color: #fff;">
+  			<h1 style="text-align: center;">DEMO</h1>
+  		</div>
+  	</div>
+    <div class="row">
+      <ul class="col-md-3">
+        <li><a href="#/">首页</a></li>
+        <li><a href="#/computers">电脑</a></li>
+        <li><a href="#/printers">打印机</a></li>
+        <li><a href="#/blabla">其他</a></li>
+      </ul>
+      <div class="col-md-9">
+        <div ng-view></div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="angular.min.js"></script>
+  <script type="text/javascript" src="angular-route.min.js"></script>
+  <script type="text/javascript">
+  angular.module('app', ['ngRoute']).config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+  	$locationProvider.hashPrefix('')
+    $routeProvider
+      .when('/', { template: '首页页面' })
+      .when('/computers', { template: '电脑分页' })
+      .when('/printers', { template: '打印机分页' })
+      .otherwise({ redirectTo: '/' })
+  }])
+  </script>
+</body>
+
+</html>

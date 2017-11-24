@@ -1,0 +1,26 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body ng-app="">
+
+
+	<div ng-init="myswitch=true"></div>
+
+	<button ng-disabled="myswitch">click</button>
+
+	<p><input type="checkbox" ng-model="myswitch"></p>
+
+	<p>{{myswitch}}</p>
+
+	<p ng-show="true">可见</p>
+	<p ng-show="false">不可见</p>
+
+	<h1 ng-hide="true">不可见</h1>
+	<h1 ng-hide="false">可见</h1>
+
+	<script type="text/javascript" src="angular.min.js"></script>
+	
+</body>
+</html>

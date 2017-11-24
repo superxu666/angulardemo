@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body ng-app="app">
+
+  
+    <!-- app -->
+    <!-- <a ui-sref="index">点击显示父视图的内容</a>
+    <a ui-sref="index.content1">点击显示父视图 和 子视图的内容1</a> 
+    <a ui-sref="index.content2">点击显示父视图 和 子视图的内容2</a>
+    <div ui-view="index">名为index的视图<div> -->
+
+
+    <!-- 嵌套路由 -->
+    <!-- app2 -->
+    <!-- <p><a ui-sref='parent'>点我显示父view内容</a></p>
+    <p><a ui-sref='parent.child'>点我显示父view 与 子view内容</a></p>
+    <div ui-view></div> -->
+
+
+    <!-- app3 -->
+    <!-- <div ui-view></div> -->
+
+
+    <!-- 通过views实现多视图 -->
+    <!-- app4 -->
+    <!-- <p><a ui-sref='index'>点我显示index内容</a></p>
+    <div ui-view='header'></div>
+    <div ui-view='nav'></div>
+    <div ui-view='body'></div> -->
+
+    
+    <!-- ui-view的定位 -->
+    <!-- app5 -->
+    <!-- 调用index模板 -->
+    <!-- <p><a ui-sref='index'>show index</a></p> 
+    <p><a ui-sref='index.content1'>content----1</a></p>
+    <p><a ui-sref='index.content2'>content----2</a></p>
+    <div ui-view='homeview'></div> -->
+    <!-- <div ui-view='header'></div> -->
+
+
+
+    <!-- URL路由传参（通过$stateParams服务获取参数） -->
+
+    <!-- <p><a ui-sref='index({id:30})'>show index</a></p>
+    <p><a ui-sref='test({username:"peter"})'>show test</a></p>
+    <div ui-view></div> -->
+
+
+
+
+    <!-- Resolve（预载入） -->
+    <a ui-sref='index'>index</a>
+    <div ui-view></div>
+    
+
+
+  <script src="node_modules/angular/angular.min.js"></script>
+  <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <!-- <script src="app.js"></script> -->
+  <!-- <script src="app2.js"></script> -->
+  <!-- <script src="app3.js"></script> -->
+  <!-- <script src="app4.js"></script> -->
+  <!-- <script src="app5.js"></script> -->
+  <!-- <script src="app6.js"></script> -->
+  <script src="app7.js"></script>
+</body>
+</html>

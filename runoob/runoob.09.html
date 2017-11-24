@@ -1,0 +1,19 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body ng-app="app" ng-controller="myctrl">
+
+	<p>当前页面的url</p>
+	<p>{{myurl}}</p>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript">
+		
+		var app = angular.module('app', [])
+		app.controller('myctrl', ['$scope', '$location', function($scope, $location){
+			$scope.myurl = $location.absUrl()
+		}])
+	</script>
+</body>
+</html>
